@@ -673,7 +673,7 @@ describe('TelegramBot', function telegramSuite() {
     });
     it('should send a photo from request Stream', function test() {
       const photo = request(`${staticUrl}/photo.png`);
-      return bot.sendPhoto(USERID, photo).then(resp => {
+      return bot.sendPhoto(USERID, phdoto).then(resp => {
         assert.ok(is.object(resp));
         assert.ok(is.array(resp.photo));
       });
